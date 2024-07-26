@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head> 
-        <meta charset="UTF-8">
-        <title> Aula 1 </title>
-    </head>
-
-    <body>
-        <h1> Tela de Cadastro de Usuario Aula 1</h1>
-        <fieldset>
-            <form>
-                <label> E-mail : </label>
-                <input type="email"> 
-                <label> Telefone : </label>
-                <input type="number">
-                <label> Nome : </label>
-                <input type="text">
-                <label> Tipo de pessoa: </label>
-                <span> Fisica </span><input name = "Tipo" type="radio"> <span> Juridica </span><input name="Tipo" type="checkbox"> 
-            </form>
-        </fieldset>
-
-        
-
-
-    </body>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Cadastro de Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tela de Cadastro de Usuário</h1>
+    <fieldset>
+        <legend>Formulário de Cadastro</legend>
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="(11) 12345-6789" required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label>Tipo de pessoa:</label>
+                <label><input type="radio" id="fisica" name="tipo" value="fisica"> Física</label>
+                <label><input type="radio" id="juridica" name="tipo" value="juridica"> Jurídica</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </fieldset>
+</body>
 </html>
