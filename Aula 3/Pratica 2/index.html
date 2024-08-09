@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica 2 formulario de cadastro de pessoa</title>
+<!-- Pratica 2 formulario de cadastro de pessoa -->
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: auto;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pratica 2 formulario de cadastro de pessoa -->
+    <h2>Formulario de cadastro de pessoa</h2>
+    <fieldset>
+        <form>
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" name="nome">
+    
+            <label for="Sobrenome">Sobrenome:</label>
+            <input id="Sobrenome" type="text" name="Sobrenome">
+    
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email">
+    
+            <label for="nasc">Data de nascimento:</label>
+            <input id="nasc" type="date" name="nasc">
+    
+            <label for="sexo">Sexo:</label>
+            <input id="sexo" type="radio" name="sexo" value="Masculino">Masculino
+            <input id="sexo" type="radio" name="sexo" value="Feminino">Feminino
+    
+            <label for="ende">Endereço:</label>
+            <input id="ende" type="text" name="ende">
+    
+            <label for="CEP">CEP:</label>
+            <input id="CEP" type="text" name="CEP">
+    
+            <label for="cor">Cor favorita:</label>
+            <input id="cor" type="color" name="cor">
+    
+            <label for="UF">Estado (UF):</label>
+            <input id="UF" type="text" name="UF">
+        </form>
+    </fieldset>
+
+</body>
+
+</html>
