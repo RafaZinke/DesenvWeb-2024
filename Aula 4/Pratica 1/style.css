@@ -1,0 +1,30 @@
+
+        form, div{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: auto;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        #form1{
+            background-color: lightblue;
+        }
+
+        #form2{
+            background-color: lightgray;
+            font-size: smaller;
+        }
+
+        #form3{
+            background-color: lightgray;
+            font-size: large;
+            font-style: italic ;
+        }

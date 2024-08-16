@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 2 - Formulário de Cadastro de Pessoa</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h2>Formulário de Cadastro de Pessoa</h2>
+    <fieldset>
+        <form class="formulario">
+            <div id="form1">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" name="nome">
+    
+                <label for="Sobrenome">Sobrenome:</label>
+                <input id="Sobrenome" type="text" name="Sobrenome">
+    
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" name="email">
+            </div>
+            <div id="form2">
+                <label for="nasc">Data de nascimento:</label>
+                <input id="nasc" type="date" name="nasc">
+    
+                <label for="sexo">Sexo:</label>
+                <input id="masculino" type="radio" name="sexo" value="Masculino">
+                <label for="masculino">Masculino</label>
+                <input id="feminino" type="radio" name="sexo" value="Feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+            <div id="form3">
+                <label for="ende">Endereço:</label>
+                <input id="ende" type="text" name="ende">
+    
+                <label for="CEP">CEP:</label>
+                <input id="CEP" type="text" name="CEP">
+    
+                <label for="cor">Cor favorita:</label>
+                <input id="cor" type="color" name="cor">
+    
+                <label for="UF">Estado (UF):</label>
+                <input id="UF" type="text" name="UF">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
