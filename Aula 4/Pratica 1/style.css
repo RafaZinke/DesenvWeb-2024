@@ -15,7 +15,7 @@
         }
 
         #form1{
-            background-color: lightblue;
+            background: #6498ED;
         }
 
         #form2{
@@ -27,4 +27,8 @@
             background-color: lightgray;
             font-size: large;
             font-style: italic ;
+        }
+        .Envio{
+            margin-top: 1em;
+            display: flex;
         }
