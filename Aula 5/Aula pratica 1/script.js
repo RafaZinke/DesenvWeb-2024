@@ -1,69 +1,63 @@
-let currentNumber = '';
-let previousNumber = '';
-let operation = null;
 
-function appendNumber(number) {
-    currentNumber += number;
-    updateDisplay();
-}
+const resultado = document.getElementById('Resultado');
+const botoes = document.querySelectorAll('.botao');
 
-function chooseOperation(op) {
-    if (currentNumber === '') return;
-    if (previousNumber !== '') calculate();
-    operation = op;
-    previousNumber = currentNumber;
-    currentNumber = '';
-}
 
-function calculate() {
-    let result;
-    const prev = parseFloat(previousNumber);
-    const current = parseFloat(currentNumber);
-    if (isNaN(prev) || isNaN(current)) return;
+let expressao = '';
 
-    switch (operation) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            result = prev / current;
-            break;
-        default:
-            return;
-    }
 
-    currentNumber = result;
-    operation = null;
-    previousNumber = '';
-    updateDisplay();
-}
+function atualizarVisor(valor) {
+    resultado.value = valor;
+    
+    
+    const numero = parseFloat(valor);
 
-function clearDisplay() {
-    currentNumber = '';
-    previousNumber = '';
-    operation = null;
-    updateDisplay();
-}
-
-function updateDisplay() {
-    document.getElementById('display').value = currentNumber;
-}
-
-function updateDisplay() {
-    const display = document.getElementById('display');
-    display.value = currentNumber;
-
-    if (parseFloat(currentNumber) < 0) {
-        display.className = 'display result-negative';
-    } else if (parseFloat(currentNumber) > 0) {
-        display.className = 'display result-positive';
+    if (numero > 0) {
+        resultado.style.backgroundColor = 'lightgreen'; 
+    } else if (numero < 0) {
+        resultado.style.backgroundColor = 'lightcoral'; 
+    } else if (numero === 0) {
+        resultado.style.backgroundColor = 'lightgray'; 
     } else {
-        display.className = 'display result-zero';
+        resultado.style.backgroundColor = 'white'; 
     }
 }
+
+
+function limparVisor() {
+    expressao = '';
+    atualizarVisor('');
+}
+
+
+function calcularExpressao() {
+    try {
+        
+        expressao = eval(expressao).toString();
+        atualizarVisor(expressao);
+    } catch (e) {
+        atualizarVisor('Erro');
+        resultado.style.backgroundColor = 'white'; 
+    }
+}
+
+
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const valorBotao = botao.textContent;
+
+        
+        if (valorBotao === 'C') {
+            limparVisor();
+        }
+        
+        else if (valorBotao === '=') {
+            calcularExpressao();
+        }
+        
+        else {
+            expressao += valorBotao;
+            atualizarVisor(expressao);
+        }
+    });
+});
