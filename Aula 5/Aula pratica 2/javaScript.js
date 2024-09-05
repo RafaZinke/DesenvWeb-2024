@@ -2,12 +2,12 @@ function calcularMediaPorSemestre() {
     const tabela = document.querySelector('table');
     const linhas = tabela.rows;
 
-    // Verifica se já existe a linha de "Média por Semestre"
+    
     if (linhas[linhas.length - 1].cells[0].textContent === 'Média por Semestre') {
         return; // Se já tiver, sai da função
     }
 
-    // Cria nova linha e insere a média
+    
     let novaLinha = tabela.insertRow(-1);
     novaLinha.insertCell(0).textContent = 'Média por Semestre';
 
@@ -30,15 +30,15 @@ function calcularMediaPorAluno() {
     const tabela = document.querySelector('table');
     const linhas = tabela.rows;
 
-    // Verifica se já existe a coluna de "Média"
+    
     if (linhas[1].cells[linhas[1].cells.length - 1].textContent === 'Média') {
         return; // Se já tiver, sai da função
     }
 
-    // Adiciona o título "Média" no cabeçalho
+    
     linhas[1].insertCell(-1).textContent = 'Média';
 
-    // Adiciona a média em cada linha de aluno
+    
     for (let i = 2; i < linhas.length; i++) {
         let soma = 0;
         let count = 0;
