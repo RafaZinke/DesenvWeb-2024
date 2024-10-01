@@ -14,12 +14,32 @@ resultado em vermelho */ ?>
 </head>
 <body>
 
-<?php
-$var1 = 12;
-$var2 = 15;
-$var3 = 20;
+<form method="post" action="">
+    <label for="var1">Digite o primeiro valor:</label>
+    <input type="number" name="var1" id="var1" required><br><br>
+    
+    <label for="var2">Digite o segundo valor:</label>
+    <input type="number" name="var2" id="var2" required><br><br>
+    
+    <label for="var3">Digite o terceiro valor:</label>
+    <input type="number" name="var3" id="var3" required><br><br>
+    
+    <input type="submit" value="Enviar">
+</form>
 
-$soma = $var1 + $var2 + $var3;
+
+<?php
+$var1 = $_POST['var1'];
+$var2 = $_POST['var2'];
+$var3 = $_POST['var3'];
+$soma = 0;
+
+function somar($v1 = 0, $v2 = 0, $v3 = 0){
+    $soma = $v1 + $v2 + $v3;
+    return $soma;
+}
+
+$soma = somar($var1, $var2, $var3);
 echo "<p>Soma dos 3 valores:  $soma </p>";
 
 if ($var1 > 10) {
@@ -32,6 +52,7 @@ echo "<p style = 'color:green;'> $var2 </p>" ;
 
 if ($var3 < $var1 && $var3 < $var2)
 echo "<p style = 'color:red;'> $var3 </p>" ; 
+
 ?>
 
 </body>
