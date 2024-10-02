@@ -1,5 +1,5 @@
 <?php
-require 'index.html';
+require_once 'index.html';
 
 
     $var1 = ($_POST['var1']) ;
