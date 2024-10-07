@@ -34,26 +34,15 @@ require_once 'funcoes.php';
         $v2 = $_POST['var2'];
         }
 
-    $area = Area($v1,$v2);
+    $area = TrianguloRetangulo($v1,$v2);
     ?>
 
     <!-- Define se é maior ou menor que 10-->
-    <?php
 
-    if (isset($area)) {
-        if ($area > 10) {
-            ?>
             <h1>A área da altura é: <?php echo $v1; ?> e sua base <?php echo $v2; ?>
-            para um total de: <?php echo $area; ?> metros quadrados</h1>
-            <?php
-        } else {
-            ?>
-            <h3>A área da altura é: <?php echo $v1; ?> e sua base <?php echo $v2; ?>
-            para um total de: <?php echo $area; ?> metros quadrados</h3>
-            <?php
-                }
-    }
-    ?>
+            para um total de: <?php echo $area; ?></h1>
+            
+       
 
 
 </body>

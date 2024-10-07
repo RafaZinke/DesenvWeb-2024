@@ -6,19 +6,7 @@ com o valor da operação.
 Fórmula -> Resultado = (Base * Altura) / 2 */ ?>
 
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>FolhaExercicios</title>
-    
-</head>
-<body>
-
 <?php
-
-
-?>
-
-</body>
-</html>
+    function TrianguloRetangulo($altura = 0, $base = 0) {
+       return ($altura * $base) / 2;
+    }
