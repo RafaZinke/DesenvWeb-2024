@@ -12,6 +12,8 @@ require_once 'funcoes.php';
 
 <body>
 
+
+
     <form method="post" action="index.php">
         <label for="var1">Maça:</label>
         <input type="number" name="var1" id="var1" required><br><br>
@@ -63,6 +65,11 @@ require_once 'funcoes.php';
     }
     ?>
 
+<php
+$maca = 0;
+$melancia = 0;
+$laranja = 0;
+?>
 
     <?php 
     if(calculoCompra($maca, $melancia, $laranja, $repolho, $cenoura, $batatinha) > 50 ){

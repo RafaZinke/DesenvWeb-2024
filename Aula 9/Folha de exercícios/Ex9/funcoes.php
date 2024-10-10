@@ -15,19 +15,27 @@ C = Capital Inicial
 i = Taxa de juros
 t = Tempo */ ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>FolhaExercicios</title>
-    
-</head>
-<body>
-
 <?php
+function calcularParcelasCompostas($valorMoto, $taxaJuros, $numParcelas) {
+    $montante = $valorMoto * pow((1 + $taxaJuros / 100), $numParcelas);
+    $valorParcela = $montante / $numParcelas;
 
+    return $valorParcela;
+}
 
+function exibirTaxaJurosCompostos($numParcelas) {
+    switch ($numParcelas) {
+        case 24:
+            return 2.0;
+        case 36:
+            return 2.3;
+        case 48:
+            return 2.6;
+        case 60:
+            return 2.9;
+        default:
+            return 0;
+    }
+}
 ?>
 
-</body>
-</html>
