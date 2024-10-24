@@ -4,6 +4,7 @@ require_once 'calculadora.php';
 
 // Lógica para processar o formulário se for enviado
 $resultado = '';
+$teste1 = new CalculadoraOR;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero1 = isset($_POST["numero1"]) ? $_POST["numero1"] : 0;
     $numero2 = isset($_POST["numero2"]) ? $_POST["numero2"] : 0;
@@ -63,6 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST") : ?>
         <h2>Resultado: <?php echo $resultado; ?></h2>
+
+        <?php  $teste1->setOperador1($numero1); ?>
+        <h1> Numero1: <?php echo $teste1->getOperador1(); ?> </h1>
     <?php endif; ?>
 </body>
 </html>

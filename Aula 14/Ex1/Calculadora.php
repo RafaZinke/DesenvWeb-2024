@@ -25,4 +25,19 @@ class Calculadora {
         return $a / $b;
     }
 }
+
+class CalculadoraOR
+    {
+    private $operador;
+    public function setOperador1($valor1){
+        $this -> operador = $valor1;
+    }
+    public function getOperador1(){
+        return $this->operador;
+    }
+}
+
+
+
+
 ?>
