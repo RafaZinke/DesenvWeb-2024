@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8</title>
+</head>
+
 <?php
 
 $salario1 = 1000;
@@ -5,8 +12,6 @@ $salario2 = 1055;
 
 
 ++$salario2;
-echo $salario1. " \n";
-echo $salario2. " \n";
 
 for ($x = 0; $x <= 100; $x++){
     ++$salario1;
@@ -15,10 +20,10 @@ for ($x = 0; $x <= 100; $x++){
     }
 }
 
-echo $salario1 . " \n";
-echo $salario2 . " \n";
 if  ($salario1 < $salario2) {
-    echo "O Valor da variável 1 é menor que o valor da variável 2";
+    echo " <h1> O Valor da variável 1 é menor que o valor da variável 2 </h1>";
     }
 
 ?>
+
+</html>
