@@ -24,7 +24,7 @@ return $aprovado = array_sum($faltas);
 echo "A media é: ". number_format(media($notas), 2);
 echo "<p>A frequencia do aluno é: " . frequencia($faltas) . "</p>"; 
 
-if (frequencia($faltas) >= 7) {
+if (frequencia($faltas) >= 7 && media($notas) >= 7) {
     echo "<h3>Aprovado </h3>";
 }
 else  {
