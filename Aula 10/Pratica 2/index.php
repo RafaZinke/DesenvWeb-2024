@@ -13,7 +13,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['time'])) {
     echo "Bem-vindo, $usuario! Você está no time: $time.";
 } else {
     echo "Os dados da sessão foram perdidos";
-    exit;
+    
 }
 
 session_destroy();
